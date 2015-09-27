@@ -1,5 +1,6 @@
 class Blog
 	attr_reader :entries
+	attr_writer :post_source
 
 	def initialize
 		@entries = []
@@ -11,5 +12,11 @@ class Blog
 
 	def subtitle
 		"The trusted source for drying paint news and opinion"
+	end
+
+	private
+
+	def post_source
+		@post_source ||= Post.public_method(:new)
 	end
 end
