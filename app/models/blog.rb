@@ -1,4 +1,4 @@
-class Blog < ActiveRecord::Base
+class Blog
 
 	def title
 		"Watching Paint Dry"		
