@@ -20,6 +20,10 @@ class Blog
     "The trusted source for drying paint news and opinion"
   end
 
+  def add_entry(entry)
+    entries << entry
+  end
+
   private
 
   def post_source
