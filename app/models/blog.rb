@@ -6,8 +6,8 @@ class Blog
     @entries = []
   end
 
-  def new_post
-    post_source.call.tap do |p|
+  def new_post(*args)
+    post_source.call(*args).tap do |p|
       p.blog = self
     end
   end
@@ -18,6 +18,10 @@ class Blog
 
   def subtitle
     "The trusted source for drying paint news and opinion"
+  end
+
+  def add_entry(entry)
+    entries << entry
   end
 
   private
