@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.0.10'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -28,7 +28,7 @@ gem 'ruby-debug19', :require => 'ruby-debug'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
-  gem 'minitest', '~> 2.11.0'
+  gem 'minitest'
   gem 'rr'
   gem 'passenger'
   gem 'guard'
