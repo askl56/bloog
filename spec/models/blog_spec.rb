@@ -10,7 +10,7 @@ describe Blog do
     subject.entries.must_be_empty
   end
 
-  describe "#new_entry" do
+  describe "#new_post" do
     let(:new_post) { OpenStruct.new }
 
     before do
@@ -23,6 +23,14 @@ describe Blog do
 
     it "sets the post's blog reference to itself" do
       subject.new_post.blog.must_equal(subject)
+    end
+
+    it "accepts an attribute hash on behalf of the post maker" do
+      post_source = MiniTest::Mock.new
+      post_source.expect(:call, @new_post, [{x: 42, y: 'z'}])
+      @it.post_source = post_source
+      @it.new_post(x: 42, y: 'z')
+      post_source.verify
     end
   end
 
