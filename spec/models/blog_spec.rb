@@ -3,26 +3,26 @@ require_relative '../../app/models/blog'
 require 'ostruct'
 
 describe Blog do
-  before do
-    @it = Blog.new
+  subject       { Blog.new(->{entries}) }
+  let(:entries) { [] }
+
+  it "has no entries" do
+    subject.entries.must_be_empty
   end
 
-  it 'has no entries' do
-    @it.entries.must_be_empty
-  end
+  describe "#new_entry" do
+    let(:new_post) { OpenStruct.new }
 
-  describe "#new_post" do
     before do
-      @new_post = OpenStruct.new
-      @it.post_source = ->{ @new_post }
+      subject.post_source = ->{ new_post }
     end
 
-    it 'returns a new post' do
-      @it.new_post.must_equal @new_post
+    it "returns a new post" do
+      subject.new_post.must_equal new_post
     end
 
     it "sets the post's blog reference to itself" do
-      @it.new_post.blog.must_equal(@it)
+      subject.new_post.blog.must_equal(subject)
     end
   end
 end
