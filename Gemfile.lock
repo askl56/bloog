@@ -1,5 +1,19 @@
+GIT
+  remote: git://github.com/aspiers/guard-minitest.git
+  revision: 0f3732401c55af30965fbc0580293e5e923baee1
+  specs:
+    guard-minitest (1.0.0.beta1)
+      guard (~> 1.1)
+
+GIT
+  remote: git://github.com/avdi/nulldb.git
+  revision: 53d6ad34670a0d56d470c7b5a2ee52b3c12e0f06
+  specs:
+    activerecord-nulldb-adapter (0.2.3)
+      activerecord (>= 2.0.0)
+
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (4.2.4)
       actionpack (= 4.2.4)
@@ -36,42 +50,97 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.3.8)
     arel (6.0.3)
-    binding_of_caller (0.7.2)
-      debug_inspector (>= 0.0.1)
     builder (3.2.2)
-    byebug (6.0.2)
-    coffee-rails (4.1.0)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0, < 5.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.9.1.1)
-    debug_inspector (0.0.2)
+    capybara (2.5.0)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    childprocess (0.5.6)
+      ffi (~> 1.0, >= 1.0.11)
+    coderay (1.1.0)
+    cucumber (1.3.20)
+      builder (>= 2.1.2)
+      diff-lcs (>= 1.1.3)
+      gherkin (~> 2.12)
+      multi_json (>= 1.7.5, < 2.0)
+      multi_test (>= 0.1.2)
+    cucumber-rails (1.4.2)
+      capybara (>= 1.1.2, < 3)
+      cucumber (>= 1.3.8, < 2)
+      mime-types (>= 1.16, < 3)
+      nokogiri (~> 1.5)
+      rails (>= 3, < 5)
+    database_cleaner (1.5.0)
+    diff-lcs (1.2.5)
+    dynamic_form (1.1.4)
     erubis (2.7.0)
-    execjs (2.6.0)
+    ffi (1.9.10)
+    formatador (0.2.5)
+    gherkin (2.12.2)
+      multi_json (~> 1.3)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    guard (1.8.3)
+      formatador (>= 0.2.4)
+      listen (~> 1.3)
+      lumberjack (>= 1.0.2)
+      pry (>= 0.9.10)
+      thor (>= 0.14.6)
+    guard-bundler (1.0.0)
+      bundler (~> 1.0)
+      guard (~> 1.1)
+    guard-compat (1.2.1)
+    guard-cucumber (1.5.4)
+      cucumber (>= 1.3.0)
+      guard-compat (~> 1.0)
+      nenv (~> 0.1)
+    guard-migrate (1.0.0)
+      guard (>= 1.3.0)
+    guard-passenger (0.6.1)
+      guard (>= 1.1.0)
+      guard-compat (~> 1.1)
+    guard-shell (0.6.1)
+      guard (>= 1.1.0)
+    guard-spork (1.5.2)
+      childprocess (>= 0.2.3)
+      guard (~> 1.1)
+      spork (>= 0.8.4)
     i18n (0.7.0)
-    jbuilder (2.3.1)
-      activesupport (>= 3.0.0, < 5)
-      multi_json (~> 1.2)
-    jquery-rails (4.0.5)
-      rails-dom-testing (~> 1.0)
-      railties (>= 4.2.0)
-      thor (>= 0.14, < 2.0)
     json (1.8.3)
+    kgio (2.10.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    libnotify (0.9.1)
+      ffi (>= 1.0.11)
+    listen (1.3.1)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
+      rb-kqueue (>= 0.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
+    lumberjack (1.0.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
     mime-types (2.6.2)
     mini_portile (0.6.2)
     minitest (5.8.1)
     multi_json (1.11.2)
+    multi_test (0.1.2)
+    nenv (0.2.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    passenger (5.0.20)
+      rack
+      rake (>= 0.8.1)
+    pry (0.10.2)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -99,19 +168,16 @@ GEM
       activesupport (= 4.2.4)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    raindrops (0.15.0)
     rake (10.4.2)
-    rdoc (4.2.0)
-    sass (3.4.18)
-    sass-rails (5.0.4)
-      railties (>= 4.0.0, < 5.0)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
-    sdoc (0.4.1)
-      json (~> 1.7, >= 1.7.7)
-      rdoc (~> 4.0)
-    spring (1.4.0)
+    rb-fsevent (0.9.6)
+    rb-inotify (0.9.5)
+      ffi (>= 0.5.0)
+    rb-kqueue (0.2.4)
+      ffi (>= 0.5.0)
+    rr (1.1.2)
+    slop (3.6.0)
+    spork (0.9.2)
     sprockets (3.3.4)
       rack (~> 1.0)
     sprockets-rails (2.3.3)
@@ -121,37 +187,42 @@ GEM
     sqlite3 (1.3.10)
     thor (0.19.1)
     thread_safe (0.3.5)
-    tilt (2.0.1)
-    turbolinks (2.5.3)
-      coffee-rails
+    timecop (0.8.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.7.2)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
-    web-console (2.2.1)
-      activemodel (>= 4.0)
-      binding_of_caller (>= 0.7.2)
-      railties (>= 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
+    unicorn (4.9.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
-  coffee-rails (~> 4.1.0)
-  jbuilder (~> 2.0)
-  jquery-rails
+  activerecord-nulldb-adapter!
+  cucumber-rails
+  database_cleaner
+  dynamic_form
+  guard
+  guard-bundler
+  guard-cucumber
+  guard-migrate
+  guard-minitest!
+  guard-passenger
+  guard-shell
+  guard-spork
+  launchy
+  libnotify
   minitest
-  rails (= 4.2.4)
-  sass-rails (~> 5.0)
-  sdoc (~> 0.4.0)
-  spring
+  passenger
+  rails
+  rb-inotify
+  rr
   sqlite3
-  turbolinks
-  uglifier (>= 1.3.0)
-  web-console (~> 2.0)
+  timecop
+  unicorn
 
 BUNDLED WITH
    1.10.6
