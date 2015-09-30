@@ -30,14 +30,6 @@ group :development, :test do
   gem 'minitest'
   gem 'rr'
   gem 'passenger'
-  gem 'guard'
-  gem 'guard-minitest', git: "git://github.com/aspiers/guard-minitest.git"
-  gem 'guard-passenger'
-  gem 'guard-bundler'
-  gem 'guard-shell'
-  gem 'guard-migrate'
-  gem 'guard-spork'
-  gem 'guard-cucumber'
   gem 'rb-inotify'
   gem 'libnotify'
   gem 'activerecord-nulldb-adapter',
